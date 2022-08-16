@@ -1,16 +1,16 @@
 import React, {useState,useEffect } from 'react'
 import {Link,Navigate} from 'react-router-dom'
 //import { setEditEmployee } from '../redux/editAction';
-import { useDispatch } from 'react-redux';
+import { useDispatch ,useSelector} from 'react-redux';
 import { createEmployee } from '../redux/createAction';
+import { getByID } from '../redux/editAction';
 export default function Edit() {
   const dispatch = useDispatch();
-  //let id = useSelector((state) => state.editId);
-  let studentdata = {};//useSelector((state) => state.seteditdata);
+  let studentdata = useSelector((state) => state.seteditdata);
     
     useEffect(()=>{
       let id = parseInt(window.location.href.substring(27));
-      //dispatch(setEditEmployee(id));
+      dispatch(getByID(id));
       //console.log(studentdata);
       
     },[])

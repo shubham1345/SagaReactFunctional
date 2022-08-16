@@ -9,7 +9,7 @@ function* getProducts() {
 }
 function* getEmployee(id){
 let data = {};
- yield axios.get(`https://localhost:44392/api/student/edit/${id.data}`)
+ yield axios.get(`https://localhost:44392/api/student/edit/${id.id}`)
         .then((response) => {
           data = response.data[0];
            

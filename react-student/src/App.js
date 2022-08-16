@@ -11,7 +11,7 @@ function App() {
             <Route exact path="/" element={<GetAll />} />
             <Route exact path="/GetAll" element={<GetAll />} />
             <Route exact path="/Create" element={<Create />} />
-            <Route exact path="/Edit" element={<Edit />} />
+            <Route exact path="/Edit/:id" element={<Edit />} />
           </Routes>
     </div>
   );
